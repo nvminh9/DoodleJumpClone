@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/doodlejump.js"></script> 
+    <title>Game Doodle Jump Clone</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo"> 
+            <img src="img/doodlejumplogo.png" alt="">
+        </div>
+
+
+        <div id="boxStartbtn">
+            <input id="btnStart" type="button" value="Start" onclick="startGame()">
+        </div>
+        <div id="boxScorebtn">
+            <input id="btnScore" type="submit" value="Score" onclick="showScore()">
+        </div>
+        <div id="gifdoodle">
+            <img src="img/graphics.png" alt="">
+        </div>
+        <div id="yourScore" >
+            
+        </div>
+        <div class="info">
+            <div class="cottruyen">
+                <h2>Cốt Truyện</h2>
+                <p>
+                    Cốt truyện của trò chơi Doodle Jump khá đơn giản. 
+                    Người chơi điều khiển một nhân vật nhỏ gọi là "Doodler" (hay "Doodle Man") 
+                    và nhiệm vụ của họ là giúp Doodler leo lên cao nhất có thể trên các 
+                    nền tảng xuất hiện ngẫu nhiên trên màn hình. Doodler sống trên một hành tinh 
+                    nơi mọi thứ đều được vẽ ra bằng mực. 
+                    Một ngày nọ, hành tinh của Doodler bị xâm chiếm bởi các quái vật độc ác. 
+                    Để bảo vệ ngôi nhà và bạn bè của mình, Doodler quyết định sử dụng khả năng đặc biệt
+                    của mình để leo lên trên các nền tảng và tiêu diệt các quái vật. 
+                </p>
+            </div>
+            <div class="howtoplay">
+                <h2>Hướng dẫn</h2>
+                <p>Sử dụng các phím mũi tên để điều khiển nhân vật Doodler nhảy lên các platform 
+                    <br> Cố gắng để đi xa nhất có thể và dành được điểm cao trong bảng xếp hạng <br>
+                    <span style="font-size: 15px;">Enjoy Doodle Jump !</span>
+                </p>
+            </div>
+            <div class="icon">
+                <span><i class="fa-brands fa-github"></i></span>
+            </div>
+        </div>
+        <!-- Game Board -->
+        <canvas id="board">
+        </canvas>
+        <div id="boardScore">
+            <button id="btnXscore" onclick="hideScore()">X</button>
+            <table id="tableScore">
+                
+            </table>
+        </div>
+        <!-- <a class="mail" href="#">@minhngo</a> -->
+    </div>  
+    <!-- <p>Nếu không bấm được nút Start hãy bấm F5 và thử lại :l</p> -->
+</body>
+</html>

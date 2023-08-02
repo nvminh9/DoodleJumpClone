@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Oswald:wght@400;600&family=Poppins:wght@300;400;600&family=Rubik+Puddles&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    background-image: url(../img/body_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+#board{
+    background-image: url(../img/backdrop2.jpg);
+    border: 1px solid rgba(255, 255, 255, 0.301);
+    box-shadow: rgba(255, 255, 255, 0.301) 0px 5px 15px;
+    background-size: cover;
+    overflow: hidden;
+}
+#boardScore{    
+    /* background: transparent;
+    backdrop-filter: blur(20px); */
+    position: absolute;
+    transform: translate(600px, 250px);
+    visibility: hidden;
+}
+#btnXscore{
+    font-size: 25px;
+    font-weight: 600;
+    background: #333;
+    color: white;
+    width: 45px;
+    height: 40px;
+    transform: translate(140px, 2px);
+}
+#btnXscore:hover{
+    background-color: black;
+}
+#boardScore table td{
+    color: white;
+    padding: 10px 10px;
+}
+#boardScore table thead td{
+    font-weight: 600;
+    font-size: 20px;
+    background-color: rgba(104, 8, 8, 0.922);
+    border-bottom: 1px solid white;
+}
+#boardScore table tbody{
+    background-color: #333;
+}
+.logo{
+    /* transform: translate(50px, 50px); */
+}
+.logo img{
+    max-width: 400px;
+    position: absolute;
+    height: auto;
+    transform: rotate(-4deg);
+    right: 70%;
+    top: 6%;
+}
+a.mail{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.499);
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.container{
+    display: grid;
+}
+#boxStartbtn{
+    transform: translate(327px, 467px);
+    position: absolute;
+
+}
+#boxScorebtn{
+    transform: translate(327px, 551px);
+    position: absolute;
+
+}
+#btnStart, #btnScore{
+    visibility: visible;
+    width: 130px;
+    height: 60px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #000000ba;
+    color: #84d20de3;
+    border-radius: 30%;
+}
+#btnStart:hover, #btnScore:hover{
+    background-color: #333;
+}
+#yourScore{
+    transform: translate(118px, 210px);
+    position: absolute;
+    background-color: #000000ba;
+    /* border: 1px solid; */
+    color: whitesmoke;
+    font-size: 28px;
+    width: 294px;
+    height: 205px;
+    border-radius: 20%;
+    visibility: hidden;
+    box-shadow: rgba(75, 240, 46, 0.4) -5px 5px, rgba(101, 240, 46, 0.3) -10px 10px, rgba(75, 240, 46, 0.2) -15px 15px, rgba(82, 240, 46, 0.1) -20px 20px, rgba(75, 240, 46, 0.05) -25px 25px;
+}
+#yourScore h1, h2{
+    font-size: 38px;
+    color: #84d20de3;
+}
+body p{
+    position: absolute;
+    color: white;
+    font-size: 13px;
+    font-weight: 400;
+    bottom: 0;
+    
+}
+#gifdoodle{
+    position: absolute;
+    transform: translate(33px, 510px);
+}
+#gifdoodle img{
+    width: 85px;
+}
+/* CSS phần box info */
+.info{
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    left: 115px;
+    top: 175px;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    border: 1px solid grey;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.info p{
+    position: relative;
+    color: black;
+    text-align: center;
+    margin: 10px;
+}
+.info h2{
+    margin: 10px;
+    color: black;
+    font-size: 30px;
+}
+.info .icon{
+    font-size: 40px;
+}
+.info .icon i{
+    cursor: pointer;
+}
+.info .icon i:hover{
+    color: rgba(161, 5, 5, 0.875);
+}
+#yourScore span{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    left: 200px;
+    top: 95px;
+    transform: rotateZ(14deg);
+    animation-name: newrecord;
+    animation: newrecord 3s infinite;
+    transition: ease-in-out 2s;
+}
+@keyframes newrecord {
+    0%   {color: rgb(255, 0, 204);}
+    100% {color: red;}
+  }
