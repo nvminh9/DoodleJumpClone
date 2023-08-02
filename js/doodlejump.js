@@ -72,9 +72,9 @@ window.onload = function(){
     soundJump = new sound("../sounds/jump.wav");
     soundGameover = new sound("../sounds/gameover.wav");
 
-    // doodlerRightImg = new Image();
-    // doodlerRightImg.src = "/img/doodler-right.png";
-    // doodler.img = doodlerRightImg;
+    doodlerRightImg = new Image();
+    doodlerRightImg.src = "/img/doodler-right.png";
+    doodler.img = doodlerRightImg;
     // doodlerRightImg.onload = function(){
     //     context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height );
     // }
