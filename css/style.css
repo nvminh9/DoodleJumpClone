@@ -17,7 +17,7 @@ body{
     overflow: hidden;
 }
 #board{
-    background-image: url(../img/backdrop2.jpg);
+    background-image: url(../img/doodlejumpbg.png);
     border: 1px solid rgba(255, 255, 255, 0.301);
     box-shadow: rgba(255, 255, 255, 0.301) 0px 5px 15px;
     background-size: cover;
@@ -90,8 +90,8 @@ a.mail{
     position: absolute;
 
 }
-#btnStart, #btnScore{
-    visibility: visible;
+#btnScore{
+    visibility: hidden;
     width: 130px;
     height: 60px;
     font-size: 25px;

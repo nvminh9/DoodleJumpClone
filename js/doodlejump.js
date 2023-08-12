@@ -75,18 +75,19 @@ window.onload = function(){
     doodlerRightImg = new Image();
     doodlerRightImg.src = "/img/doodler-right.png";
     doodler.img = doodlerRightImg;
-    // doodlerRightImg.onload = function(){
-    //     context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height );
-    // }
+    doodlerRightImg.onload = function(){
+        context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height );
+    }
 
     doodlerLeftImg = new Image();
     doodlerLeftImg.src = "/img/doodler-left.png"
+
     platformImg = new Image();
     platformImg.src = "/img/platform.png"
 
     velocityY = initialVelocityY;
-    update();
     placePlatforms();
+    requestAnimationFrame(update);
     document.addEventListener("keydown", moveDoodler);
     // placePlatforms();
     // document.addEventListener("keydown", moveDoodler);
@@ -145,21 +146,21 @@ function update(){
     context.font = "20px sans-serif";
     context.fillText(score, 5, 25);
 
-    if(startGame){
-        document.getElementById("boxStartbtn").style.visibility = 'hidden';
-        document.getElementById("btnStart").style.visibility = 'hidden';
-        document.getElementById("boxScorebtn").style.visibility = 'hidden';
-        document.getElementById("btnScore").style.visibility = 'hidden';
-        document.getElementById("yourScore").style.visibility = 'hidden';
-        document.getElementById("board").style.backgroundImage="url(../img/doodlejumpbg.png)";
-        document.getElementById("gifdoodle").style.visibility='hidden';
-    }
+    // if(startGame){
+    //     document.getElementById("boxStartbtn").style.visibility = 'hidden';
+    //     document.getElementById("btnStart").style.visibility = 'hidden';
+    //     document.getElementById("boxScorebtn").style.visibility = 'hidden';
+    //     document.getElementById("btnScore").style.visibility = 'hidden';
+    //     document.getElementById("yourScore").style.visibility = 'hidden';
+    //     document.getElementById("board").style.backgroundImage="url(../img/doodlejumpbg.png)";
+    //     document.getElementById("gifdoodle").style.visibility='hidden';
+    // }
     if(gameover){
         soundGameover.play();
         context.fillText("Game Over: Press \"Space\" to Restart", boardWidth/4, boardHeight*7/8);
         document.getElementById("boxScorebtn").style.visibility = 'visible';
         document.getElementById("btnScore").style.visibility = 'visible';
-        document.getElementById("btnStart").value = 'Restart';
+        // document.getElementById("btnStart").value = 'Restart';
         document.getElementById("yourScore").style.visibility = 'visible';
         document.getElementById("yourScore").innerHTML = "<h1>Your Score: </h1>" + score + "<h2>Your High Score: </h2>" + highscore ;
         if(score == highscore && score > 0 && gameover){
@@ -258,6 +259,8 @@ function moveDoodler(e){
         doodler.img = doodlerLeftImg;
     }
     if(e.code == "Space" && gameover){
+        document.getElementById("yourScore").style.visibility = 'hidden';
+        document.getElementById("btnScore").style.visibility = 'hidden';
         doodler = {
             img: doodlerRightImg,
             x: doodlerX,
@@ -290,9 +293,9 @@ function startGame(){
     doodlerRightImg = new Image();
     doodlerRightImg.src = "/img/doodler-right.png";
     doodler.img = doodlerRightImg;
-    doodlerRightImg.onload = function(){
-        context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height );
-    }
+    // doodlerRightImg.onload = function(){
+    //     context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height );
+    // }
     placePlatforms();
     document.addEventListener("keydown", moveDoodler);
         // maxScore = 0;
