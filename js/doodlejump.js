@@ -72,12 +72,12 @@ window.onload = function(){
     soundJump = new sound("sounds/jump.wav");
     soundGameover = new sound("sounds/gameover.wav");
 
-    doodlerRightImg = new Image();
-    doodlerRightImg.src = "img/doodler-right.png";
-    doodler.img = doodlerRightImg;
-    doodlerRightImg.onload = function(){
-        context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height );
-    }
+    // doodlerRightImg = new Image();
+    // doodlerRightImg.src = "img/doodler-right.png";
+    // doodler.img = doodlerRightImg;
+    // doodlerRightImg.onload = function(){
+    //     context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height );
+    // }
 
     doodlerLeftImg = new Image();
     doodlerLeftImg.src = "img/doodler-left.png"
@@ -146,15 +146,15 @@ function update(){
     context.font = "20px sans-serif";
     context.fillText(score, 5, 25);
 
-    // if(startGame){
-    //     document.getElementById("boxStartbtn").style.visibility = 'hidden';
-    //     document.getElementById("btnStart").style.visibility = 'hidden';
-    //     document.getElementById("boxScorebtn").style.visibility = 'hidden';
-    //     document.getElementById("btnScore").style.visibility = 'hidden';
-    //     document.getElementById("yourScore").style.visibility = 'hidden';
-    //     document.getElementById("board").style.backgroundImage="url(../img/doodlejumpbg.png)";
-    //     document.getElementById("gifdoodle").style.visibility='hidden';
-    // }
+    if(startGame){
+        document.getElementById("boxStartbtn").style.visibility = 'hidden';
+        document.getElementById("btnStart").style.visibility = 'hidden';
+        document.getElementById("boxScorebtn").style.visibility = 'hidden';
+        document.getElementById("btnScore").style.visibility = 'hidden';
+        document.getElementById("yourScore").style.visibility = 'hidden';
+        document.getElementById("board").style.backgroundImage="url(img/doodlejumpbg.png)";
+        document.getElementById("gifdoodle").style.visibility='hidden';
+    }
     if(gameover){
         soundGameover.play();
         context.fillText("Game Over: Press \"Space\" to Restart", boardWidth/4, boardHeight*7/8);
@@ -293,9 +293,9 @@ function startGame(){
     doodlerRightImg = new Image();
     doodlerRightImg.src = "img/doodler-right.png";
     doodler.img = doodlerRightImg;
-    // doodlerRightImg.onload = function(){
-    //     context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height );
-    // }
+    doodlerRightImg.onload = function(){
+        context.drawImage(doodler.img, doodler.x, doodler.y, doodler.width, doodler.height );
+    }
     placePlatforms();
     document.addEventListener("keydown", moveDoodler);
         // maxScore = 0;
