@@ -69,8 +69,8 @@ window.onload = function(){
     context = board.getContext("2d");
 
     // Khởi tạo âm thanh 
-    soundJump = new sound("../sounds/jump.wav");
-    soundGameover = new sound("../sounds/gameover.wav");
+    soundJump = new sound("sounds/jump.wav");
+    soundGameover = new sound("sounds/gameover.wav");
 
     doodlerRightImg = new Image();
     doodlerRightImg.src = "img/doodler-right.png";
